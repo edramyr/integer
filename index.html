@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive Number Checker</title>
+    <script>
+        function checkNumber() {
+            // Get the user input
+            let number = document.getElementById("userInput").value;
+
+            // Convert the user input to a number
+            number = parseFloat(number);
+
+            // Check if the number is positive
+            if (number > 0) {
+                document.getElementById("result").innerText = "The number is positive.";
+            } else {
+                document.getElementById("result").innerText = "The number is not positive.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter a Number</h2>
+    <label for="userInput"></label>
+    <input type="text" id="userInput">
+    <button onclick="checkNumber()">Check</button>
+    <p id="result"></p>
+</body>
+</html>
